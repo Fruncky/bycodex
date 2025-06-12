@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Merci pour votre message&nbsp;!</h1>
+<p>Nous vous contacterons prochainement.</p>
+<ul>
+  <li>Prénom : {{ data.first_name }}</li>
+  <li>Nom : {{ data.last_name }}</li>
+  <li>Email : {{ data.email }}</li>
+  <li>Téléphone : {{ data.phone }}</li>
+  <li>Code postal : {{ data.postal_code }}</li>
+  {% if data.schedule %}<li>Créneau : {{ data.schedule }}</li>{% endif %}
+</ul>
+<a href="{{ url_for('index') }}" class="btn btn-secondary">Retour</a>
+{% endblock %}

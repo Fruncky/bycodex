@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# SQLite database
+contacts.db
+
+# Node modules or other heavy dependencies
+node_modules/

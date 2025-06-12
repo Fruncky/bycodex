@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="mb-4">Formation IA</h1>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card h-100 text-center">
+      <div class="card-body">
+        <h5 class="card-title">Initiation IA</h5>
+        <p class="card-text">Découvrez les bases de l'intelligence artificielle et son potentiel pour votre entreprise.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 text-center">
+      <div class="card-body">
+        <h5 class="card-title">Automatisation</h5>
+        <p class="card-text">Identifiez les processus pouvant être automatisés grâce aux nouvelles technologies.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 text-center">
+      <div class="card-body">
+        <h5 class="card-title">API</h5>
+        <p class="card-text">Intégrez des API d'IA dans vos propres applications pour gagner en efficacité.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 text-center">
+      <div class="card-body">
+        <h5 class="card-title">Data Analytics</h5>
+        <p class="card-text">Exploitez vos données pour prendre de meilleures décisions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="mt-5">Nos forfaits</h2>
+<ul class="list-group">
+  <li class="list-group-item">500 € la demi-journée sur site (Île-de-France)</li>
+  <li class="list-group-item">300 € la demi-journée en ligne</li>
+</ul>
+
+<h2 class="mt-5">Contact</h2>
+<form action="{{ url_for('contact') }}" method="POST" class="row g-3">
+  <div class="col-md-6">
+    <label for="first_name" class="form-label">Prénom</label>
+    <input type="text" class="form-control" id="first_name" name="first_name" required>
+  </div>
+  <div class="col-md-6">
+    <label for="last_name" class="form-label">Nom</label>
+    <input type="text" class="form-control" id="last_name" name="last_name" required>
+  </div>
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+  </div>
+  <div class="col-md-6">
+    <label for="phone" class="form-label">Téléphone</label>
+    <input type="tel" class="form-control" id="phone" name="phone" required>
+  </div>
+  <div class="col-md-6">
+    <label for="postal_code" class="form-label">Code postal</label>
+    <input type="text" class="form-control" id="postal_code" name="postal_code" required>
+  </div>
+  <div class="col-md-6">
+    <label for="schedule" class="form-label">Créneau souhaité</label>
+    <input type="text" class="form-control" id="schedule" name="schedule" placeholder="Ex: lundi 10h">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </div>
+</form>
+{% endblock %}
